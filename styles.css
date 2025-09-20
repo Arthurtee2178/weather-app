@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #87ceeb;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.weather-app {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 8px;
+  width: 70%;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.search-box button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #0056b3;
+}
+
+.search-box button:focus{outline:3px solid rgba(0,123,255,0.25)}
+
+@media (max-width:420px){
+  .search-box{display:flex;gap:8px}
+  .search-box input{width:60%}
+  .search-box button{padding:8px 10px}
+}
+
+.weather-result.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.weather-main{display:flex;align-items:center;gap:12px;justify-content:center}
+.weather-main img{width:64px;height:64px;object-fit:contain}
+.weather-info .temp{font-size:1.6rem;font-weight:700;margin:6px 0}
+.weather-info .desc{color:#555;margin:0}
+.weather-extra{display:flex;gap:12px;justify-content:center;margin-top:12px;color:#444}
+.loading{margin-top:12px;color:#007BFF}
+.hidden{display:none}
+
+/* background banner that uses user's images */
+#weather-bg{position:relative;width:100%;height:90px;border-radius:6px;margin-bottom:12px;background-size:cover;background-position:center;filter:brightness(0.9)}
+
+/* small screens */
+@media (max-width:420px){
+  .weather-app{width:90%;padding:16px}
+  .weather-main img{width:56px;height:56px}
+}
