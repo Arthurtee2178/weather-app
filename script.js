@@ -1,5 +1,5 @@
 
-const API_KEY = ""; t.
+const API_KEY = ""; 
 let PARSED_API_KEY = API_KEY;
 const appidMatch = String(API_KEY).match(/[?&]appid=([a-zA-Z0-9]+)/);
 if (appidMatch) PARSED_API_KEY = appidMatch[1];
@@ -125,6 +125,7 @@ function mapWeatherToBackground(main) {
   if (key.includes('wind')) return 'images/vuuu.jpg';
   return 'images/vuuu.jpg';
 }
+
 
 
 
