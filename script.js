@@ -1,8 +1,5 @@
-// If API_KEY is empty, the script will use a small offline mock dataset so the UI works immediately.
-// You can paste either the raw API key or a full OpenWeatherMap URL — we will extract the key.
-const API_KEY = "api.openweathermap.org/data/2.5/weather?q=germany&appid=f7aa34226308b4b59cadcb970a770199&units=metric"; // <-- put your OpenWeatherMap API key or full URL here for live data
 
-// Normalize API key: if the user pasted a full URL with an appid parameter, extract it.
+const API_KEY = ""; t.
 let PARSED_API_KEY = API_KEY;
 const appidMatch = String(API_KEY).match(/[?&]appid=([a-zA-Z0-9]+)/);
 if (appidMatch) PARSED_API_KEY = appidMatch[1];
@@ -129,18 +126,7 @@ function mapWeatherToBackground(main) {
   return 'images/vuuu.jpg';
 }
 
-// small mock dataset for offline/demo usage
-function getMockWeather(city) {
-  const samples = {
-    'london': { name: 'London', country: 'GB', temp: 14.2, description: 'Light rain', humidity: 82, wind: 4.1, main: 'Rain' },
-    'new york': { name: 'New York', country: 'US', temp: 22.5, description: 'Clear sky', humidity: 55, wind: 3.4, main: 'Clear' },
-    'nairobi': { name: 'Nairobi', country: 'KE', temp: 26.3, description: 'Partly cloudy', humidity: 60, wind: 2.1, main: 'Clouds' },
-  };
-  return samples[city.toLowerCase()] || null;
-}
 
-/* To enable live data:
- 1. Sign up at https://openweathermap.org/ and get an API key.
- 2. Paste it into the API_KEY constant at the top of this file.
- 3. Optionally set USE_METRIC / units if you want Fahrenheit.
- */
+
+
+
